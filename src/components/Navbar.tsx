@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 type NavChild = {
   label: string;
@@ -95,10 +95,23 @@ const chevron = (
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [expanded, setExpanded] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="relative z-20 px-4 pt-6 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl rounded-full bg-[#f5f0e8] px-6 py-4 shadow-[0_8px_30px_rgba(0,0,0,0.12)] sm:px-8 sm:py-5 lg:px-10">
+    <header className="fixed top-0 left-0 right-0 z-50 px-4 pt-6 sm:px-6 lg:px-8">
+      <div className={`mx-auto max-w-7xl rounded-full bg-[#f5f0e8] px-6 py-4 transition-all duration-300 sm:px-8 sm:py-5 lg:px-10 ${
+        scrolled 
+          ? 'shadow-[0_8px_40px_rgba(0,0,0,0.15)]' 
+          : 'shadow-[0_8px_30px_rgba(0,0,0,0.12)]'
+      }`}>
         <div className="flex items-center justify-between">
           <Link
             href="/"
