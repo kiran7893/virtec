@@ -5,7 +5,7 @@ import { Target } from "lucide-react";
 
 export default function VisionSection() {
   return (
-    <section className="relative py-20 lg:py-28 bg-white">
+    <section className="relative py-20 lg:py-28 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Text Content */}
@@ -16,19 +16,26 @@ export default function VisionSection() {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <h2 className="font-display text-4xl lg:text-5xl font-semibold text-slate-900">
-              <strong>Our </strong>
-              <span className="text-primary-yellow">
-                <strong>Vision</strong>
-              </span>
+            <h2 className="font-display text-4xl lg:text-5xl text-slate-900">
+              Our <span className="text-primary-yellow">Vision</span>
             </h2>
-            <p className="text-base lg:text-lg leading-relaxed text-slate-700">
-              <strong>
-                We work with a vision to set standards in the field of flow and heat measurement services. To achieve this, we have, over the years, focused our efforts continuously on improving and innovating our{" "}
-                <span className="text-primary-yellow font-semibold">technology</span>. Our vision inspires us to develop advanced, useful products that meet customer requirements and are environmentally{" "}
-                <span className="text-primary-yellow font-semibold">sustainable</span> as well.
-              </strong>
-            </p>
+            <div className="space-y-4 text-base lg:text-lg leading-relaxed text-slate-700">
+              <p>
+                At Virtec, our vision is to set industry benchmarks in the field of flow and heat measurement services.
+              </p>
+              <p>
+                We are committed to continuous technological advancement through{" "}
+                <span className="text-primary-yellow">innovation</span>,{" "}
+                <span className="text-primary-yellow">precision</span>, and{" "}
+                <span className="text-primary-yellow">reliability</span>. By consistently enhancing our product portfolio with the latest solutions for the HVAC industry, we deliver advanced, practical, and sustainable technologies that meet evolving customer needs while supporting environmental responsibility.
+              </p>
+              <p>
+                Our vision drives us to create long-term value through{" "}
+                <span className="text-primary-yellow">excellence</span>,{" "}
+                <span className="text-primary-yellow">integrity</span>, and{" "}
+                <span className="text-primary-yellow">forward-looking engineering</span>.
+              </p>
+            </div>
           </motion.div>
 
           {/* Right Column - Icon/Visual */}

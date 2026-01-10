@@ -135,4 +135,34 @@ body {
     @apply bg-background text-foreground;
     font-family: var(--font-fraunces), "Times New Roman", serif;
   }
+  
+  /* Apply display font styling to all headings and text elements */
+  h1, h2, h3, h4, h5, h6, p, span, div, a, li, button, strong, em, b, i {
+    font-family: var(--font-fraunces), "Times New Roman", serif;
+  }
+  
+  /* Specific heading styles with tight leading */
+  h1 {
+    @apply leading-tight;
+  }
+  
+  h2 {
+    @apply leading-tight;
+  }
+  
+  h3 {
+    @apply leading-tight;
+  }
+  
+  h4 {
+    @apply leading-tight;
+  }
+  
+  h5 {
+    @apply leading-tight;
+  }
+  
+  h6 {
+    @apply leading-tight;
+  }
 }

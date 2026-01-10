@@ -196,7 +196,7 @@ export default function Hero() {
                           <motion.div
                             variants={textVariants}
                             transition={{ duration: 0.6, delay: 0.1 }}
-                            className="inline-flex items-center gap-2 px-4 py-2 bg-primary-yellow/20 rounded-full text-white font-semibold text-xs uppercase tracking-[0.2em] backdrop-blur border border-primary-yellow/30"
+                            className="inline-flex items-center gap-2 px-4 py-2 bg-primary-yellow/20 rounded-full text-white text-xs uppercase tracking-[0.2em] backdrop-blur border border-primary-yellow/30"
                           >
                             <slide.icon size={18} className="text-primary-yellow" />
                             <span>{slide.badge}</span>
@@ -207,7 +207,7 @@ export default function Hero() {
                             <motion.h1
                               variants={textVariants}
                               transition={{ duration: 0.8, delay: 0.2 }}
-                              className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white leading-tight"
+                              className="font-display text-4xl sm:text-5xl lg:text-6xl text-white leading-tight"
                             >
                               {slide.title}
                             </motion.h1>
@@ -215,7 +215,7 @@ export default function Hero() {
                             <motion.h2
                               variants={textVariants}
                               transition={{ duration: 0.8, delay: 0.3 }}
-                              className="text-xl sm:text-2xl lg:text-3xl font-semibold text-primary-yellow"
+                              className="text-xl sm:text-2xl lg:text-3xl text-primary-yellow"
                             >
                               {slide.subtitle}
                             </motion.h2>
@@ -270,7 +270,7 @@ export default function Hero() {
                             >
                               <Link
                                 href={slide.ctaLink || "#products"}
-                                className="inline-flex items-center justify-center rounded-full bg-primary-yellow px-8 py-3 text-base font-semibold text-slate-900 shadow-[0_14px_30px_rgba(255,203,8,0.35)] transition hover:brightness-95"
+                                className="inline-flex items-center justify-center rounded-full bg-primary-yellow px-8 py-3 text-base text-slate-900 shadow-[0_14px_30px_rgba(255,203,8,0.35)] transition hover:brightness-95"
                               >
                                 {slide.ctaText || "Explore Products"}
                                 <ArrowRight size={20} className="ml-2" />
@@ -282,7 +282,7 @@ export default function Hero() {
                             >
                               <Link
                                 href="#contact"
-                                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/30 bg-white/10 backdrop-blur px-8 py-3 text-base font-semibold text-white transition hover:bg-white/20 hover:border-white/50"
+                                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/30 bg-white/10 backdrop-blur px-8 py-3 text-base text-white transition hover:bg-white/20 hover:border-white/50"
                               >
                                 <Phone size={20} />
                                 Talk to an Engineer

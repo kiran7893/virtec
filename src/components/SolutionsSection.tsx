@@ -45,7 +45,7 @@ const solutions = [
 
 export default function SolutionsSection() {
   return (
-    <section id="solutions" className="relative py-20 lg:py-28 bg-[#f5f0e8]">
+    <section id="solutions" className="relative py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -55,13 +55,11 @@ export default function SolutionsSection() {
           transition={{ duration: 0.6 }}
           className="mb-12 lg:mb-16"
         >
-          <h2 className="font-display text-4xl lg:text-5xl font-semibold text-slate-900 mb-4">
-            <strong>Our Solutions</strong>
+          <h2 className="font-display text-4xl lg:text-5xl text-slate-900 mb-4">
+            Our Solutions
           </h2>
           <p className="text-base lg:text-lg text-slate-700 max-w-3xl">
-            <strong>
-              We have a wide range of products and services for our clients that focus on:
-            </strong>
+            We have a wide range of products and services for our clients that focus on:
           </p>
         </motion.div>
 
@@ -76,7 +74,7 @@ export default function SolutionsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group flex flex-col items-center text-center p-6 rounded-2xl bg-white/50 hover:bg-white transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
+                className="group flex flex-col items-center text-center p-8 rounded-2xl bg-white border border-slate-200 hover:border-primary-yellow/30 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
               >
                 {/* Icon */}
                 <div className="mb-4 p-4 rounded-full bg-primary-yellow/10 group-hover:bg-primary-yellow/20 transition-colors">
@@ -88,8 +86,8 @@ export default function SolutionsSection() {
                 </div>
                 
                 {/* Solution Name */}
-                <h3 className="font-semibold text-lg lg:text-xl text-slate-900">
-                  <strong>{solution.name}</strong>
+                <h3 className="text-lg lg:text-xl text-slate-900">
+                  {solution.name}
                 </h3>
               </motion.div>
             );

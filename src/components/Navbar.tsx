@@ -107,7 +107,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-4 pt-6 sm:px-6 lg:px-8">
-      <div className={`mx-auto max-w-7xl rounded-full bg-[#f5f0e8] px-6 py-4 transition-all duration-300 sm:px-8 sm:py-5 lg:px-10 ${
+      <div className={`mx-auto max-w-7xl rounded-full bg-white px-6 py-4 transition-all duration-300 sm:px-8 sm:py-5 lg:px-10 border border-slate-200 ${
         scrolled 
           ? 'shadow-[0_8px_40px_rgba(0,0,0,0.15)]' 
           : 'shadow-[0_8px_30px_rgba(0,0,0,0.12)]'
@@ -115,7 +115,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           <Link
             href="/"
-            className="flex items-center gap-3 text-xl font-semibold text-slate-900 sm:text-2xl"
+            className="flex items-center gap-3 text-xl text-slate-900 sm:text-2xl"
           >
             <Image
               src="/virtec-logo.png"
@@ -150,7 +150,7 @@ export default function Navbar() {
                           href={child.href}
                           className="group/item rounded-xl border border-transparent p-3 transition hover:border-slate-200 hover:bg-slate-50"
                         >
-                          <div className="text-sm font-semibold text-slate-900 group-hover/item:text-slate-950">
+                          <div className="text-sm text-slate-900 group-hover/item:text-slate-950">
                             {child.label}
                           </div>
                           <div className="mt-1 text-xs leading-relaxed text-slate-600">
@@ -176,13 +176,13 @@ export default function Navbar() {
           <div className="hidden items-center gap-3 lg:flex">
             <Link
               href="#contact"
-              className="rounded-full border border-slate-300 px-5 py-2.5 text-base font-semibold text-slate-700 transition hover:border-slate-400 hover:bg-slate-50 hover:text-slate-900"
+              className="rounded-full border border-slate-300 px-5 py-2.5 text-base text-slate-700 transition hover:border-slate-400 hover:bg-slate-50 hover:text-slate-900"
             >
               Request demo
             </Link>
             <Link
               href="#quote"
-              className="rounded-full bg-primary-yellow px-6 py-2.5 text-base font-semibold text-slate-900 shadow-[0_14px_30px_rgba(255,203,8,0.35)] transition hover:brightness-95"
+              className="rounded-full bg-primary-yellow px-6 py-2.5 text-base text-slate-900 shadow-[0_14px_30px_rgba(255,203,8,0.35)] transition hover:brightness-95"
             >
               Get a quote
             </Link>
@@ -213,14 +213,14 @@ export default function Navbar() {
       </div>
 
       {mobileOpen ? (
-        <div className="mx-auto mt-4 max-w-7xl rounded-full border border-slate-200 bg-[#f5f0e8] px-6 pb-6 shadow-[0_8px_30px_rgba(0,0,0,0.12)] lg:hidden">
+        <div className="mx-auto mt-4 max-w-7xl rounded-full border border-slate-200 bg-white px-6 pb-6 shadow-[0_8px_30px_rgba(0,0,0,0.12)] lg:hidden">
           <div className="flex flex-col gap-4 pt-4">
             {navItems.map((item) =>
               item.children ? (
                 <div key={item.label} className="rounded-2xl border border-slate-200">
                   <button
                     type="button"
-                    className="flex w-full items-center justify-between px-4 py-3 text-left text-base font-semibold text-slate-800"
+                    className="flex w-full items-center justify-between px-4 py-3 text-left text-base text-slate-800"
                     onClick={() =>
                       setExpanded((current) =>
                         current === item.label ? null : item.label,
@@ -243,7 +243,7 @@ export default function Navbar() {
                           href={child.href}
                           className="block rounded-xl border border-slate-100 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-700"
                         >
-                          <div className="text-sm font-semibold text-slate-900">
+                          <div className="text-sm text-slate-900">
                             {child.label}
                           </div>
                           <div className="mt-1 text-xs text-slate-600">
@@ -258,22 +258,22 @@ export default function Navbar() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="text-base font-semibold text-slate-700"
-                >
-                  {item.label}
-                </Link>
-              ),
+                className="text-base text-slate-700"
+              >
+                {item.label}
+              </Link>
+            ),
             )}
             <div className="flex flex-col gap-3 pt-2">
               <Link
                 href="#contact"
-                className="rounded-full border border-slate-300 px-4 py-2.5 text-center text-base font-semibold text-slate-700"
+                className="rounded-full border border-slate-300 px-4 py-2.5 text-center text-base text-slate-700"
               >
                 Request demo
               </Link>
               <Link
                 href="#quote"
-                className="rounded-full bg-primary-yellow px-4 py-2.5 text-center text-base font-semibold text-slate-900 shadow-[0_14px_30px_rgba(255,203,8,0.35)]"
+                className="rounded-full bg-primary-yellow px-4 py-2.5 text-center text-base text-slate-900 shadow-[0_14px_30px_rgba(255,203,8,0.35)]"
               >
                 Get a quote
               </Link>
