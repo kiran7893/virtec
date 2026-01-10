@@ -33,112 +33,112 @@ type NavItem = {
 const navItems: NavItem[] = [
   {
     label: "Products",
-    href: "#products",
+    href: "/products",
     categories: [
       {
         label: "Flow Meters",
-        href: "#flow-meters",
+        href: "/products#flow-meters",
         description: "High-precision ultrasonic and electromagnetic flow measurement",
         products: [
           {
             label: "VIR-800 Series",
-            href: "#vir-800",
+            href: "/products/vir-800",
             description: "Electromagnetic Flow Meter and Heat Meter - Inline Flanged",
           },
           {
             label: "VIR-ISRT-800 Series",
-            href: "#vir-isrt-800",
+            href: "/products/vir-isrt-800",
             description: "Electromagnetic Flow Meter - Inline Insertion Type",
           },
           {
             label: "LXC Series",
-            href: "#lxc-battery",
+            href: "/products/lxc-battery",
             description: "Ultrasonic Flow Meter - Battery Operated",
           },
           {
             label: "VIR-850 Series",
-            href: "#vir-850",
+            href: "/products/vir-850",
             description: "Ultrasonic Flow Meter and Heat Meter - 24V",
           },
           {
             label: "VIR-832 Insertion",
-            href: "#vir-832-insertion",
+            href: "/products/vir-832-insertion",
             description: "Ultrasonic Flow Meter - Insertion Type",
           },
           {
             label: "VIR-832 Clamp On",
-            href: "#vir-832-clamp",
+            href: "/products/vir-832-clamp",
             description: "Non-Invasive Clamp On Meter",
           },
           {
             label: "LXC Water Meter",
-            href: "#lxc-water",
+            href: "/products/lxc-water",
             description: "Electronic Flow Meter for Water",
           },
         ],
       },
       {
         label: "Heat Meters",
-        href: "#heat-meters",
+        href: "/products#heat-meters",
         description: "Accurate thermal energy measurement for district systems",
         products: [
           {
             label: "VIR UF",
-            href: "#vir-uf",
+            href: "/products/vir-uf",
             description: "Ultrasonic Heat Meter - Range 125mm to 800mm",
           },
           {
             label: "LXC Threaded Brass",
-            href: "#lxc-threaded",
+            href: "/products/lxc-threaded",
             description: "Ultrasonic Heat Meter - Threaded Brass Series",
           },
           {
             label: "LXC Flange Series",
-            href: "#lxc-flange",
+            href: "/products/lxc-flange",
             description: "Ultrasonic Heat Meter - Range 50mm to 300mm",
           },
         ],
       },
       {
         label: "Variable Speed Drives",
-        href: "#vsd",
+        href: "/products#vsd",
         description: "Intelligent motor control for energy efficiency",
         products: [
           {
             label: "Eco EM-700",
-            href: "#em-700",
+            href: "/products/em-700",
             description: "VSD for Ventilation",
           },
           {
             label: "Basic EM-750 Series",
-            href: "#em-750",
+            href: "/products/em-750",
             description: "VSD for AHU",
           },
           {
             label: "Advanced EM-760",
-            href: "#em-760",
+            href: "/products/em-760",
             description: "Advanced control logic for AHU and Pumps",
           },
         ],
       },
       {
         label: "IAQ Sensors",
-        href: "#iaq",
+        href: "/products#iaq",
         description: "Advanced monitoring for temperature, humidity, CO₂, PM",
         products: [
           {
             label: "VIR-IAQ-6-Series",
-            href: "#vir-iaq-6",
+            href: "/products/vir-iaq-6",
             description: "Multi Sensor Option",
           },
           {
             label: "IAQ Sensor with Display",
-            href: "#iaq-display",
+            href: "/products/iaq-display",
             description: "IAQ Sensor with Display",
           },
           {
             label: "IAQ Sensor without Display",
-            href: "#iaq-no-display",
+            href: "/products/iaq-no-display",
             description: "IAQ Sensor without Display",
           },
         ],
@@ -273,23 +273,37 @@ export default function Navbar() {
                   className="relative"
                   data-dropdown-container
                 >
-                  <button
-                    type="button"
-                    className="flex items-center gap-1.5 text-base font-medium text-slate-700 transition hover:text-slate-900"
-                    aria-haspopup="true"
-                    aria-expanded={openDesktopDropdown === item.label}
-                    onClick={() => {
-                      setOpenDesktopDropdown(openDesktopDropdown === item.label ? null : item.label);
-                      if (openDesktopDropdown === item.label) {
+                  <div className="flex items-center gap-1.5">
+                    <Link
+                      href={item.href}
+                      className="text-base font-medium text-slate-700 transition hover:text-slate-900"
+                      onClick={() => {
+                        // Close dropdown when navigating
+                        setOpenDesktopDropdown(null);
                         setHoveredCategory(null);
-                      }
-                    }}
-                  >
-                    {item.label}
-                    <span className={`text-slate-600 transition-transform duration-200 ${openDesktopDropdown === item.label ? 'rotate-180' : ''}`}>
-                      {chevron}
-                    </span>
-                  </button>
+                      }}
+                    >
+                      {item.label}
+                    </Link>
+                    <button
+                      type="button"
+                      className="text-slate-600 transition hover:text-slate-800"
+                      aria-haspopup="true"
+                      aria-expanded={openDesktopDropdown === item.label}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        setOpenDesktopDropdown(openDesktopDropdown === item.label ? null : item.label);
+                        if (openDesktopDropdown === item.label) {
+                          setHoveredCategory(null);
+                        }
+                      }}
+                    >
+                      <span className={`transition-transform duration-200 ${openDesktopDropdown === item.label ? 'rotate-180' : ''}`}>
+                        {chevron}
+                      </span>
+                    </button>
+                  </div>
                   
                   {/* Main Categories Dropdown */}
                   <div 
