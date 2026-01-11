@@ -83,7 +83,7 @@ export default function ProductDetailPage({ product }: ProductDetailPageProps) {
                       <Check className="w-4 h-4 text-primary-yellow" />
                     </div>
                     <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                      {typeof feature === "string" ? feature : feature.description}
+                      {feature}
                     </p>
                   </motion.div>
                 ))}
