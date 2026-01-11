@@ -220,12 +220,6 @@ export default function ProductDetailPage({ product }: ProductDetailPageProps) {
                   Contact Us
                   <ArrowRight className="w-5 h-5" />
                 </a>
-                <Link
-                  href="/products"
-                  className="inline-flex items-center justify-center gap-2 bg-white/10 text-white border border-white/20 px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300"
-                >
-                  View All Products
-                </Link>
               </div>
             </div>
           </div>

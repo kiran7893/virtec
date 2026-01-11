@@ -33,7 +33,7 @@ type NavItem = {
 const navItems: NavItem[] = [
   {
     label: "Products",
-    href: "/products",
+    href: "#",
     categories: [
       {
         label: "Flow Meters",
@@ -274,17 +274,22 @@ export default function Navbar() {
                   data-dropdown-container
                 >
                   <div className="flex items-center gap-1.5">
-                    <Link
-                      href={item.href}
+                    <button
+                      type="button"
                       className="text-base font-medium text-slate-700 transition hover:text-slate-900"
-                      onClick={() => {
-                        // Close dropdown when navigating
-                        setOpenDesktopDropdown(null);
-                        setHoveredCategory(null);
+                      aria-haspopup="true"
+                      aria-expanded={openDesktopDropdown === item.label}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        setOpenDesktopDropdown(openDesktopDropdown === item.label ? null : item.label);
+                        if (openDesktopDropdown === item.label) {
+                          setHoveredCategory(null);
+                        }
                       }}
                     >
                       {item.label}
-                    </Link>
+                    </button>
                     <button
                       type="button"
                       className="text-slate-600 transition hover:text-slate-800"
