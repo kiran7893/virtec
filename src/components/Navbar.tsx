@@ -147,26 +147,26 @@ const navItems: NavItem[] = [
   },
   {
     label: "Solutions",
-    href: "#solutions",
+    href: "/solutions",
     children: [
       {
         label: "District Energy",
-        href: "#district-energy",
+        href: "/solutions/district-energy",
         description: "Accurate metering for heating and cooling networks.",
       },
       {
         label: "HVAC Optimization",
-        href: "#hvac",
+        href: "/solutions/hvac-optimization",
         description: "Smart balancing for buildings and campuses.",
       },
       {
         label: "Water Utilities",
-        href: "#water",
+        href: "/solutions/water-utilities",
         description: "Loss reduction and flow transparency at scale.",
       },
       {
         label: "Industrial IoT",
-        href: "#iot",
+        href: "/solutions/industrial-iot",
         description: "Connect meters with analytics and control platforms.",
       },
     ],
@@ -380,35 +380,66 @@ export default function Navbar() {
                   )}
                 </div>
               ) : item.children ? (
-                <div key={item.label} className="group relative">
-                  <button
-                    type="button"
-                    className="flex items-center gap-1.5 text-base font-medium text-slate-700 transition hover:text-slate-900"
-                    aria-haspopup="true"
-                  >
-                    {item.label}
-                    <span className="text-slate-600 transition group-hover:text-slate-800">
-                      {chevron}
-                    </span>
-                  </button>
-                  <div className="pointer-events-none absolute left-0 top-full mt-5 w-[380px] rounded-2xl border border-slate-200 bg-white p-5 opacity-0 shadow-[0_30px_80px_rgba(15,23,42,0.12)] backdrop-blur transition duration-200 group-hover:pointer-events-auto group-hover:opacity-100">
-                    <div className="grid gap-2">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.label}
-                          href={child.href}
-                          className="group/item rounded-xl border border-slate-100 p-3 transition hover:border-slate-200 hover:bg-slate-50"
-                        >
-                          <div className="text-sm font-medium text-slate-900 group-hover/item:text-primary-yellow transition-colors">
-                            {child.label}
-                          </div>
-                          <div className="mt-1 text-xs leading-relaxed text-slate-600">
-                            {child.description}
-                          </div>
-                        </Link>
-                      ))}
-                    </div>
+                <div 
+                  key={item.label} 
+                  className="relative"
+                  data-dropdown-container
+                  onMouseEnter={() => setOpenDesktopDropdown(item.label)}
+                  onMouseLeave={() => {
+                    setOpenDesktopDropdown(null);
+                  }}
+                >
+                  <div className="flex items-center gap-1.5">
+                    <button
+                      type="button"
+                      className={`text-base font-medium transition ${
+                        openDesktopDropdown === item.label ? "text-slate-900" : "text-slate-700 hover:text-slate-900"
+                      }`}
+                      aria-haspopup="true"
+                      aria-expanded={openDesktopDropdown === item.label}
+                    >
+                      {item.label}
+                    </button>
+                    <button
+                      type="button"
+                      className={`transition ${
+                        openDesktopDropdown === item.label ? "text-slate-800" : "text-slate-600 hover:text-slate-800"
+                      }`}
+                      aria-haspopup="true"
+                      aria-expanded={openDesktopDropdown === item.label}
+                    >
+                      <span className={`transition-transform duration-200 ${openDesktopDropdown === item.label ? 'rotate-180' : ''}`}>
+                        {chevron}
+                      </span>
+                    </button>
                   </div>
+                  
+                  {/* Children Dropdown */}
+                  {openDesktopDropdown === item.label && (
+                    <div className="absolute left-0 top-full pt-5 z-50">
+                      <div className="w-[380px] rounded-2xl border border-slate-200 bg-white p-5 shadow-[0_30px_80px_rgba(15,23,42,0.12)] backdrop-blur">
+                        <div className="grid gap-2">
+                          {item.children.map((child) => (
+                            <Link
+                              key={child.label}
+                              href={child.href}
+                              className="group/item rounded-xl border border-slate-100 p-3 transition hover:border-primary-yellow hover:bg-yellow-50/50"
+                              onClick={() => {
+                                setOpenDesktopDropdown(null);
+                              }}
+                            >
+                              <div className="text-sm font-medium text-slate-900 group-hover/item:text-primary-yellow transition-colors">
+                                {child.label}
+                              </div>
+                              <div className="mt-1 text-xs leading-relaxed text-slate-600">
+                                {child.description}
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
               ) : (
                 <Link

@@ -1,0 +1,58 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+export default function SolutionsHero() {
+  return (
+    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left Column - Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="space-y-6"
+          >
+            <h1 className="font-display text-4xl lg:text-6xl text-slate-900 leading-tight">
+              Our <span className="text-primary-yellow">Solutions</span>
+            </h1>
+            <div className="space-y-4 text-base lg:text-lg leading-relaxed text-slate-700">
+              <p>
+                Virtec provides comprehensive solutions for energy measurement, HVAC optimization, water utility management, and industrial IoT applications. Our integrated approach combines advanced flow measurement, intelligent control systems, and data analytics to deliver measurable results.
+              </p>
+              <p>
+                Each solution is designed to address specific industry challenges while providing scalability, reliability, and long-term value for our customers.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Right Column - Image Placeholder */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative h-64 lg:h-96 rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-primary-yellow/20 to-slate-900/10" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center space-y-2">
+                <div className="text-6xl lg:text-8xl font-display text-primary-yellow/30">
+                  V
+                </div>
+                <p className="text-sm text-slate-500 font-medium">
+                  Image Placeholder
+                </p>
+                <p className="text-xs text-slate-400">
+                  Add your solutions image here
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
