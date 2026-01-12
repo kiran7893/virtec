@@ -243,11 +243,11 @@ export default function Navbar() {
   }, [openDesktopDropdown]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-4 pt-6 sm:px-6 lg:px-8">
-      <div className={`mx-auto max-w-7xl rounded-full bg-white px-6 py-4 transition-all duration-300 sm:px-8 sm:py-5 lg:px-10 border border-slate-200 ${
+    <header className="fixed top-0 left-0 right-0 z-50">
+      <div className={`w-full bg-slate-50/80 backdrop-blur-sm py-4 px-8 transition-all duration-300 sm:py-5 sm:px-10 lg:px-20 border-b border-slate-200/80 ${
         scrolled 
-          ? 'shadow-[0_8px_40px_rgba(0,0,0,0.15)]' 
-          : 'shadow-[0_8px_30px_rgba(0,0,0,0.12)]'
+          ? 'bg-white/95 backdrop-blur-md shadow-[0_8px_40px_rgba(0,0,0,0.15)] border-slate-200' 
+          : 'shadow-[0_4px_20px_rgba(0,0,0,0.08)]'
       }`}>
         <div className="flex items-center justify-between">
           <Link
@@ -264,7 +264,7 @@ export default function Navbar() {
             />
           </Link>
 
-          <nav className="hidden items-center gap-6 lg:flex lg:gap-8">
+          <nav className="hidden items-center gap-8 lg:flex lg:gap-12">
             {navItems.map((item) =>
               item.categories ? (
                 <div 
@@ -495,7 +495,7 @@ export default function Navbar() {
       </div>
 
       {mobileOpen ? (
-        <div className="mx-auto mt-4 max-w-7xl rounded-2xl border border-slate-200 bg-white px-6 pb-6 shadow-[0_8px_30px_rgba(0,0,0,0.12)] lg:hidden">
+        <div className="w-full mt-0 rounded-2xl border-x-0 border-t-0 border-b border-slate-200 bg-white px-6 pb-6 shadow-[0_8px_30px_rgba(0,0,0,0.12)] lg:hidden">
           <div className="flex flex-col gap-4 pt-4">
             {navItems.map((item) =>
               item.categories ? (
