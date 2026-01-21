@@ -2,13 +2,14 @@
 
 import { motion } from "framer-motion";
 import { Database } from "lucide-react";
+import Image from "next/image";
 
 export default function DataAcquisitionSection() {
   return (
     <section className="relative py-12 sm:py-16 md:py-12 lg:py-16 xl:py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 xl:gap-16 items-center">
-          {/* Left Column - Image Placeholder */}
+          {/* Left Column - Image */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -16,27 +17,13 @@ export default function DataAcquisitionSection() {
             transition={{ duration: 0.6 }}
             className="relative h-56 sm:h-64 md:h-72 lg:h-96 rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.12)] order-2 lg:order-1"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-primary-yellow/20 to-slate-900/10" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center space-y-2">
-                <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display text-primary-yellow/30">
-                  V
-                </div>
-                <p className="text-sm text-slate-500 font-medium">
-                  Data Acquisition Systems
-                </p>
-                <p className="text-xs text-slate-400">
-                  Add your AMR/data collection image here
-                </p>
-              </div>
-            </div>
-            {/* Uncomment and update path when you have the image */}
-            {/* <Image
-              src="/images/data-acquisition.jpg"
+            <Image
+              src="/images/VIR-832-M TRANSMITTER.jpg"
               alt="Data Acquisition Systems"
               fill
               className="object-cover"
-            /> */}
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
           </motion.div>
 
           {/* Right Column - Content */}

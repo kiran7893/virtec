@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Check, ArrowRight, Target } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { Solution } from "@/data/solutions";
 import { getProductBySlug } from "@/lib/products";
 
@@ -39,7 +40,7 @@ export default function SolutionDetailPage({ solution }: SolutionDetailPageProps
               </p>
             </div>
             
-            {/* Hero Image Placeholder */}
+            {/* Hero Image */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -47,20 +48,13 @@ export default function SolutionDetailPage({ solution }: SolutionDetailPageProps
               transition={{ duration: 0.6 }}
               className="relative w-full h-56 sm:h-72 md:h-80 lg:h-96 rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-yellow/20 to-slate-900/10" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center space-y-2">
-                  <div className="text-6xl lg:text-8xl font-display text-primary-yellow/30">
-                    V
-                  </div>
-                  <p className="text-sm text-slate-500 font-medium">
-                    Image Placeholder
-                  </p>
-                  <p className="text-xs text-slate-400">
-                    Add your solution image here
-                  </p>
-                </div>
-              </div>
+              <Image
+                src="/images/VIR-850 FLOW METER.jpg"
+                alt={solution.title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1280px"
+              />
             </motion.div>
           </div>
 

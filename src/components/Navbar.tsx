@@ -31,6 +31,7 @@ type NavItem = {
 };
 
 const navItems: NavItem[] = [
+  { label: "Home", href: "/" },
   {
     label: "Products",
     href: "#",

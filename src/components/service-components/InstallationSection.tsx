@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Wrench } from "lucide-react";
+import Image from "next/image";
 
 export default function InstallationSection() {
   return (
@@ -31,7 +32,7 @@ export default function InstallationSection() {
             </p>
           </motion.div>
 
-          {/* Right Column - Image Placeholder */}
+          {/* Right Column - Image */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -39,27 +40,13 @@ export default function InstallationSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative h-56 sm:h-64 md:h-72 lg:h-96 rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-primary-yellow/20 to-slate-900/10" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center space-y-2">
-                <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display text-primary-yellow/30">
-                  V
-                </div>
-                <p className="text-sm text-slate-500 font-medium">
-                  Installation Services
-                </p>
-                <p className="text-xs text-slate-400">
-                  Add your installation/commissioning image here
-                </p>
-              </div>
-            </div>
-            {/* Uncomment and update path when you have the image */}
-            {/* <Image
-              src="/images/installation-services.jpg"
+            <Image
+              src="/images/VIR-800 DISPLAY2.jpg"
               alt="Installation & Commissioning"
               fill
               className="object-cover"
-            /> */}
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
           </motion.div>
         </div>
       </div>

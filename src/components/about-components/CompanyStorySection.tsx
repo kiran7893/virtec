@@ -1,27 +1,28 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function CompanyStorySection() {
   return (
     <section className="relative py-12 sm:py-16 md:py-12 lg:py-20 xl:py-24 2xl:py-28 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 xl:gap-16 items-center">
-          {/* Left Column - Image Placeholder */}
+          {/* Left Column - Image */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative h-56 sm:h-64 md:h-72 lg:h-96 rounded-xl sm:rounded-2xl overflow-hidden bg-gradient-to-br from-primary-yellow/10 to-slate-900/5 border border-slate-200 shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
+            className="relative h-56 sm:h-64 md:h-72 lg:h-96 rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
           >
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center space-y-2 sm:space-y-3">
-                <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display text-primary-yellow/20">
-                  V
-                </div>
-              </div>
-            </div>
+            <Image
+              src="/images/VIR-850 FLOW METER.jpg"
+              alt="Virtec Company Story"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
           </motion.div>
 
           {/* Right Column - Content */}

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function ResourcesHero() {
   return (
@@ -28,7 +29,7 @@ export default function ResourcesHero() {
             </div>
           </motion.div>
 
-          {/* Right Column - Image Placeholder */}
+          {/* Right Column - Image */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -36,17 +37,13 @@ export default function ResourcesHero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative h-56 sm:h-64 md:h-72 lg:h-96 rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-primary-yellow/20 to-slate-900/10" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center space-y-2">
-                <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display text-primary-yellow/30">
-                  V
-                </div>
-                <p className="text-sm text-slate-500 font-medium">
-                  Resources
-                </p>
-              </div>
-            </div>
+            <Image
+              src="/images/LXC CALCULATOR.jpg"
+              alt="Resources & Documentation"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
           </motion.div>
         </div>
       </div>

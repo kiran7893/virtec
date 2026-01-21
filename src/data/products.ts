@@ -32,6 +32,7 @@ export const products: Product[] = [
     title: "Electromagnetic Flow Meter",
     subtitle: "VIR EM (Range 6mm to 1000mm)",
     category: ["flow"],
+    image: "/images/VIR-800-1.jpg",
     description: "Electromagnetic Flow Meters are intended for fluid measurement in most industries including Water, Wastewater, Food & Beverage, Pharmaceutical and Chemical. There are two basic components of Virtec Electromagnetic Flow Meter: 1. Detector & 2. Converter. Detector includes the flow tube, isolating linear and measuring electrodes. Converter is an electronic device responsible for signal processing, flow calculation, display and output signals. Our Electronic Flow Meters are factory-tested and calibrated. A calibration certificate is included in the shipment of each meter.",
     keyFeatures: [
       "Range from 6mm to 1000mm for various applications",
@@ -66,6 +67,7 @@ export const products: Product[] = [
     title: "Electromagnetic Flow Meter",
     subtitle: "VIR-ISRT-800 Series - Inline Insertion Type",
     category: ["flow"],
+    image: "/images/VIR-800-INSRT.jpg",
     description: "The VIR-ISRT-800 Series is an inline insertion type electromagnetic flow meter designed for applications where inline installation is required. This series offers reliable flow measurement with insertion-type installation convenience.",
     keyFeatures: [
       "Inline insertion type design for easy installation",
@@ -80,6 +82,7 @@ export const products: Product[] = [
     title: "Ultrasonic Flow Meter",
     subtitle: "LXC Series - Battery Operated",
     category: ["flow"],
+    image: "/images/LXC-65.jpg",
     description: "The LXC Series Ultrasonic Flow Meter offers battery-operated convenience for applications where power supply may be limited. This portable solution provides accurate flow measurement without requiring external power connections.",
     keyFeatures: [
       "Battery-operated for portable use",
@@ -95,6 +98,7 @@ export const products: Product[] = [
     title: "Ultrasonic Flow Meter and Heat Meter",
     subtitle: "VIR-850 Series - 24V",
     category: ["flow", "heat"],
+    image: "/images/VIR-850 FLOW METER.jpg",
     description: "The VIR-850 Series is a versatile ultrasonic flow meter and heat meter operating on 24V power supply. This series combines flow measurement with thermal energy measurement capabilities for comprehensive monitoring.",
     keyFeatures: [
       "24V power supply operation",
@@ -110,6 +114,7 @@ export const products: Product[] = [
     title: "Ultrasonic Flow Meter",
     subtitle: "VIR-832 Insertion Type",
     category: ["flow"],
+    image: "/images/VIR-INSRT-3.jpg",
     description: "The VIR-832 Insertion Type ultrasonic flow meter provides non-invasive flow measurement with insertion probe installation. This design offers flexibility for various pipe sizes and applications.",
     keyFeatures: [
       "Insertion type installation",
@@ -125,6 +130,7 @@ export const products: Product[] = [
     title: "Clamp On Meter",
     subtitle: "Non-Invasive - VIR-832, VIR-DX-900",
     category: ["flow"],
+    image: "/images/VIR-832M- FLOW METER.jpg",
     description: "The VIR-832 and VIR-DX-900 Clamp On meters offer completely non-invasive flow measurement. These meters can be installed without cutting pipes or interrupting flow, making them ideal for retrofit applications.",
     keyFeatures: [
       "Completely non-invasive installation",
@@ -141,6 +147,7 @@ export const products: Product[] = [
     title: "Ultrasonic Electronic Flow Meter for Water",
     subtitle: "LXC Series",
     category: ["flow"],
+    image: "/images/WATER METER.jpg",
     description: "The Virtec Ultrasonic Heat Meter is a cutting-edge, accurate heat meter with a static flow sensor that ensures excellent measurement precision and long operational life regardless of where it is mounted. The ultrasonic heat meter is designed in a modular manner to measure the usage of heating in which water serves as the heat/cool bearing medium. The flow sensor has a sturdy brass construction and may be used with pressure scopes with threaded or flanged connections. It utilizes ultrasonic measurement technologies as well as microprocessor technology. Because all computation and flow monitoring circuits are developed on a single board, the accuracy and dependability are remarkable.",
     keyFeatures: [
       "Cutting-edge ultrasonic measurement technology",
@@ -178,6 +185,7 @@ export const products: Product[] = [
     title: "Ultrasonic Heat Meter",
     subtitle: "VIR UF - Range 125mm to 800mm",
     category: ["heat"],
+    image: "/images/VIR850 HEATMETER.jpg",
     description: "The VIR UF Ultrasonic Heat Meter provides accurate thermal energy measurement for larger diameter pipes ranging from 125mm to 800mm. This meter is ideal for district heating and cooling systems requiring precise energy measurement.",
     keyFeatures: [
       "Range from 125mm to 800mm",
@@ -192,6 +200,7 @@ export const products: Product[] = [
     title: "Ultrasonic Heat Meter",
     subtitle: "LXC Threaded Brass Series",
     category: ["heat"],
+    image: "/images/LXC-THREADED.jpg",
     description: "The LXC Threaded Brass Series ultrasonic heat meter features threaded brass construction for reliable thermal energy measurement. The threaded connection provides secure installation for various heating system applications.",
     keyFeatures: [
       "Threaded brass construction",
@@ -206,6 +215,7 @@ export const products: Product[] = [
     title: "Ultrasonic Heat Meter",
     subtitle: "LXC Flange Series - Range 50mm to 300mm",
     category: ["heat"],
+    image: "/images/LXC BRASS FLANGE.jpg",
     description: "The LXC Flange Series ultrasonic heat meter offers flanged connection design for pipes ranging from 50mm to 300mm. This series provides accurate thermal energy measurement for medium-sized district heating and cooling applications.",
     keyFeatures: [
       "Range from 50mm to 300mm",
@@ -221,6 +231,7 @@ export const products: Product[] = [
     title: "Eco EM-700",
     subtitle: "VSD for Ventilation",
     category: ["vsd"],
+    image: "/images/VFD-EM 750.jpg",
     description: "The Eco EM-700 Variable Speed Drive is designed specifically for ventilation applications. This VSD provides efficient motor control for ventilation systems, optimizing energy consumption while maintaining optimal air flow.",
     keyFeatures: [
       "Designed for ventilation applications",
@@ -235,6 +246,7 @@ export const products: Product[] = [
     title: "Basic EM-750 Series",
     subtitle: "VSD for AHU",
     category: ["vsd"],
+    image: "/images/VFD-EM 750.jpg",
     description: "The Basic EM-750 Series Variable Speed Drive is tailored for Air Handling Unit (AHU) applications. This VSD provides essential control functions for AHU systems, ensuring reliable and efficient operation.",
     keyFeatures: [
       "Designed for Air Handling Units (AHU)",
@@ -249,6 +261,7 @@ export const products: Product[] = [
     title: "HVAC Inverter",
     subtitle: "EM 760 Series",
     category: ["vsd"],
+    image: "/images/VFD-EM-760 SOLO.jpg",
     description: "The EM 760 series is tailored to meet the unique demands of HVAC systems. It includes advanced features such as automatic energy optimization, which ensures that the system operates at peak efficiency, reducing energy consumption and operational costs. The Virtec Instruments HVAC VFD Series EM 760 is a powerful and versatile solution for modern HVAC systems. With its dedicated HVAC functionality, advanced features, and robust design, it offers unparalleled performance and reliability. Whether you are looking to improve energy efficiency, enhance system control, or ensure long-term reliability, the EM 760 series is the ideal choice for your HVAC needs.",
     keyFeatures: [
       "HVAC-Dedicated Functionality: The EM 760 series is tailored to meet the unique demands of HVAC systems. It includes advanced features such as automatic energy optimization, which ensures that the system operates at peak efficiency, reducing energy consumption and operational costs.",

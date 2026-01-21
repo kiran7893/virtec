@@ -20,7 +20,7 @@ import Link from "next/link";
 // Hero slides with Virtec products and content
 const heroSlides = [
   {
-    src: "https://virtec.us/images/EM700%20Basic%20HVAC%20Inverter.jpeg",
+    src: "/images/VFD-EM 750.jpg",
     alt: "EM700 Series Mini Inverter",
     badge: "Advanced HVAC Solutions",
     title: "EM700 Series Mini Inverter",
@@ -38,7 +38,7 @@ const heroSlides = [
     ctaLink: "#products",
   },
   {
-    src: "https://virtec.us/images/Virtec-Website_-1_edited.png",
+    src: "/images/VIR-800-1.jpg",
     alt: "Electromagnetic Flow Meter",
     badge: "Precision Flow Measurement",
     title: "Electromagnetic Flow Meter - VIR EM",
@@ -56,7 +56,7 @@ const heroSlides = [
     ctaLink: "#flow-meters",
   },
   {
-    src: "https://uploads-ssl.webflow.com/6438d84d995878788d71027c/64390842903fd056ef75182c_IMAGRE%20-1_%20(1).png",
+    src: "/images/VIR850 HEATMETER.jpg",
     alt: "Ultrasonic Heat Meter",
     badge: "Thermal Energy Excellence",
     title: "Ultrasonic Heat Meter - VIR UF",
@@ -74,7 +74,7 @@ const heroSlides = [
     ctaLink: "#heat-meters",
   },
   {
-    src: "https://virtec.us/images/VIR-832-CLAMPONflowmeter.png",
+    src: "/images/VIR-832M- FLOW METER.jpg",
     alt: "Clamp-On Flow Meter",
     badge: "Non-Invasive Technology",
     title: "VIR-832 Clamp-On Flow Meter",
@@ -92,7 +92,7 @@ const heroSlides = [
     ctaLink: "#products",
   },
   {
-    src: "https://uploads-ssl.webflow.com/6438d84d995878788d71027c/64390ac59cb66255c49ac27d_Virtec%20Ultrasonic%20Water%20Meter_edited%20(1).png",
+    src: "/images/WATER METER.jpg",
     alt: "Ultrasonic Electronic Flow Meter",
     badge: "Global Leadership",
     title: "Ultrasonic Electronic Flow Meter - LXC Series",
@@ -197,36 +197,23 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative flex flex-col min-h-[100dvh] sm:min-h-[700px] md:h-screen md:max-h-screen md:overflow-hidden lg:h-screen">
+    <section className="relative bg-white pt-12 pb-6 sm:pt-16 sm:pb-8 md:pt-20 md:pb-10 lg:pt-24 lg:pb-12 xl:pt-28 xl:pb-14">
       {/* Embla Carousel */}
       <div
-        className="flex-1 w-full overflow-hidden touch-pan-y cursor-grab active:cursor-grabbing"
+        className="relative w-full overflow-hidden touch-pan-y cursor-grab active:cursor-grabbing"
         ref={emblaRef}
       >
-        <div className="flex h-full">
+        <div className="flex">
           {heroSlides.map((slide, index) => (
             <div
               key={index}
-              className="min-w-0 flex-[0_0_100%] relative h-full select-none"
+              className="min-w-0 flex-[0_0_100%] select-none"
               style={{ minWidth: "100%" }}
             >
-              {/* Background Image */}
-              <div className="absolute inset-0">
-                <Image
-                  src={slide.src}
-                  alt={slide.alt}
-                  fill
-                  className="object-cover"
-                  priority={index === 0}
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-slate-900/40" />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent md:hidden" />
-              </div>
-
-              {/* Content with Text Transitions */}
-              <div className="relative z-10 flex items-center h-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 pt-24 sm:pt-28 md:pt-20 lg:pt-24 xl:pt-32 pb-24 sm:pb-20 md:pb-12 lg:pb-16 xl:pb-20">
-                <div className="max-w-7xl mx-auto w-full">
-                  <div className="max-w-3xl lg:max-w-4xl xl:max-w-5xl">
+              <div className="max-w-7xl mx-auto pl-3 sm:pl-4 md:pl-6 lg:pl-8 pr-0">
+                <div className="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-8 xl:gap-10 items-center">
+                  {/* Left Column - Content */}
+                  <div className="w-full lg:w-2/5 space-y-3 sm:space-y-4 md:space-y-5 lg:space-y-6">
                     <AnimatePresence mode="wait">
                       {selectedIndex === index && (
                         <motion.div
@@ -240,7 +227,7 @@ export default function Hero() {
                           <motion.div
                             variants={textVariants}
                             transition={{ duration: 0.6, delay: 0.1 }}
-                            className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 md:px-4 md:py-2 lg:px-5 lg:py-2.5 bg-primary-yellow/20 rounded-full text-white text-xs sm:text-sm md:text-sm lg:text-base uppercase tracking-[0.2em] backdrop-blur border border-primary-yellow/30"
+                            className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 md:px-4 md:py-2 lg:px-5 lg:py-2.5 bg-primary-yellow/10 rounded-full text-slate-900 text-xs sm:text-sm md:text-sm lg:text-base uppercase tracking-[0.2em] border border-primary-yellow/30"
                           >
                             <slide.icon size={16} className="sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-primary-yellow" />
                             <span>{slide.badge}</span>
@@ -251,7 +238,7 @@ export default function Hero() {
                             <motion.h1
                               variants={textVariants}
                               transition={{ duration: 0.8, delay: 0.2 }}
-                              className="font-display text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-5xl text-white leading-[1.1] sm:leading-tight"
+                              className="font-display text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-4xl text-slate-900 leading-[1.1] sm:leading-tight"
                             >
                               {slide.title}
                             </motion.h1>
@@ -259,7 +246,7 @@ export default function Hero() {
                             <motion.h2
                               variants={textVariants}
                               transition={{ duration: 0.8, delay: 0.3 }}
-                              className="text-sm sm:text-base md:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-primary-yellow leading-tight"
+                              className="text-sm sm:text-base md:text-base lg:text-lg xl:text-xl 2xl:text-xl text-primary-yellow leading-tight"
                             >
                               {slide.subtitle}
                             </motion.h2>
@@ -269,7 +256,7 @@ export default function Hero() {
                           <motion.p
                             variants={textVariants}
                             transition={{ duration: 0.8, delay: 0.4 }}
-                            className="text-xs sm:text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-lg text-white/90 leading-relaxed max-w-2xl lg:max-w-3xl"
+                            className="text-xs sm:text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-base text-slate-700 leading-relaxed"
                           >
                             {slide.description}
                           </motion.p>
@@ -289,7 +276,7 @@ export default function Hero() {
                                   duration: 0.5,
                                   delay: 0.6 + featureIndex * 0.1,
                                 }}
-                                className="flex items-center gap-2 text-white"
+                                className="flex items-center gap-2 text-slate-900"
                               >
                                 <CheckCircle
                                   size={16}
@@ -315,7 +302,7 @@ export default function Hero() {
                             >
                               <Link
                                 href={slide.ctaLink || "#products"}
-                                className="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-primary-yellow px-6 py-3.5 sm:px-6 sm:py-2.5 md:px-7 md:py-2.5 lg:px-8 lg:py-3 xl:px-9 xl:py-3.5 2xl:px-10 2xl:py-4 text-base sm:text-sm md:text-sm lg:text-sm xl:text-base 2xl:text-lg text-slate-900 shadow-[0_14px_30px_rgba(255,203,8,0.35)] transition hover:brightness-95 font-semibold"
+                                className="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-primary-yellow px-6 py-3 sm:px-6 sm:py-2.5 md:px-7 md:py-2.5 lg:px-8 lg:py-3 xl:px-9 xl:py-3.5 2xl:px-10 2xl:py-4 text-sm sm:text-sm md:text-sm lg:text-sm xl:text-base 2xl:text-base text-slate-900 shadow-[0_14px_30px_rgba(255,203,8,0.35)] transition hover:brightness-95 font-semibold"
                               >
                                 {slide.ctaText || "Explore Products"}
                                 <ArrowRight size={18} className="sm:w-4 sm:h-4 md:w-4 md:h-4 lg:w-4 lg:h-4 xl:w-5 xl:h-5 ml-2" />
@@ -328,7 +315,7 @@ export default function Hero() {
                             >
                               <Link
                                 href="#contact"
-                                className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border-2 border-white/30 bg-white/10 backdrop-blur px-6 py-3.5 sm:px-6 sm:py-2.5 md:px-7 md:py-2.5 lg:px-8 lg:py-3 xl:px-9 xl:py-3.5 2xl:px-10 2xl:py-4 text-base sm:text-sm md:text-sm lg:text-sm xl:text-base 2xl:text-lg text-white transition hover:bg-white/20 hover:border-white/50 font-semibold"
+                                className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border-2 border-slate-300 bg-white text-slate-900 px-6 py-3 sm:px-6 sm:py-2.5 md:px-7 md:py-2.5 lg:px-8 lg:py-3 xl:px-9 xl:py-3.5 2xl:px-10 2xl:py-4 text-sm sm:text-sm md:text-sm lg:text-sm xl:text-base 2xl:text-base transition hover:bg-slate-50 hover:border-slate-400 font-semibold"
                               >
                                 <Phone size={18} className="sm:w-5 sm:h-5 md:w-5 md:h-5 lg:w-6 lg:h-6" />
                                 <span>Talk to an Engineer</span>
@@ -339,6 +326,24 @@ export default function Hero() {
                       )}
                     </AnimatePresence>
                   </div>
+
+                  {/* Right Column - Image */}
+                  <motion.div
+                    initial={{ opacity: 0, x: 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="w-full lg:w-3/5 relative h-72 sm:h-96 md:h-[500px] lg:h-[650px] xl:h-[750px] 2xl:h-[850px]"
+                  >
+                    <Image
+                      src={slide.src}
+                      alt={slide.alt}
+                      fill
+                      className="object-contain"
+                      priority={index === 0}
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
+                  </motion.div>
                 </div>
               </div>
             </div>
@@ -350,7 +355,7 @@ export default function Hero() {
       <div className="hidden md:flex absolute inset-y-0 left-4 lg:left-6 xl:left-8 z-40 items-center">
         <button
           onClick={scrollPrev}
-          className="group relative inline-flex h-12 w-12 lg:h-14 lg:w-14 xl:h-16 xl:w-16 items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white shadow-lg hover:bg-white/20 hover:scale-110 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-yellow focus:ring-offset-2 focus:ring-offset-transparent min-h-[48px] min-w-[48px] lg:min-h-[56px] lg:min-w-[56px]"
+          className="group relative inline-flex h-12 w-12 lg:h-14 lg:w-14 xl:h-16 xl:w-16 items-center justify-center rounded-full bg-white border border-slate-200 text-slate-900 shadow-lg hover:bg-slate-50 hover:border-slate-300 hover:scale-110 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-yellow focus:ring-offset-2 focus:ring-offset-transparent min-h-[48px] min-w-[48px] lg:min-h-[56px] lg:min-w-[56px]"
           aria-label="Previous slide"
         >
           <ChevronLeft className="h-6 w-6 lg:h-7 lg:w-7 xl:h-8 xl:w-8 transition-transform group-hover:-translate-x-1" />
@@ -359,7 +364,7 @@ export default function Hero() {
       <div className="hidden md:flex absolute inset-y-0 right-4 lg:right-6 xl:right-8 z-40 items-center">
         <button
           onClick={scrollNext}
-          className="group relative inline-flex h-12 w-12 lg:h-14 lg:w-14 xl:h-16 xl:w-16 items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white shadow-lg hover:bg-white/20 hover:scale-110 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-yellow focus:ring-offset-2 focus:ring-offset-transparent min-h-[48px] min-w-[48px] lg:min-h-[56px] lg:min-w-[56px]"
+          className="group relative inline-flex h-12 w-12 lg:h-14 lg:w-14 xl:h-16 xl:w-16 items-center justify-center rounded-full bg-white border border-slate-200 text-slate-900 shadow-lg hover:bg-slate-50 hover:border-slate-300 hover:scale-110 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-yellow focus:ring-offset-2 focus:ring-offset-transparent min-h-[48px] min-w-[48px] lg:min-h-[56px] lg:min-w-[56px]"
           aria-label="Next slide"
         >
           <ChevronRight className="h-6 w-6 lg:h-7 lg:w-7 xl:h-8 xl:w-8 transition-transform group-hover:translate-x-1" />
@@ -367,14 +372,14 @@ export default function Hero() {
       </div>
 
       {/* Custom Pagination */}
-      <div className="absolute bottom-6 sm:bottom-8 md:bottom-6 lg:bottom-8 xl:bottom-10 left-1/2 -translate-x-1/2 flex gap-2 sm:gap-2.5 md:gap-3 lg:gap-3.5 xl:gap-4 z-20">
+      <div className="absolute bottom-4 sm:bottom-6 md:bottom-4 lg:bottom-6 xl:bottom-8 left-1/2 -translate-x-1/2 flex gap-2 sm:gap-2.5 md:gap-3 lg:gap-3.5 xl:gap-4 z-20">
         {heroSlides.map((_, index) => (
           <button
             key={index}
             onClick={() => scrollTo(index)}
             className={`h-2 w-2 sm:h-2.5 sm:w-2.5 md:h-3 md:w-3 lg:h-3.5 lg:w-3.5 xl:h-4 xl:w-4 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-yellow focus:ring-offset-2 focus:ring-offset-transparent ${selectedIndex === index
               ? "w-6 sm:w-7 md:w-8 lg:w-10 xl:w-12 bg-primary-yellow"
-              : "bg-white/30 hover:bg-white/60"
+              : "bg-slate-300 hover:bg-slate-400"
               }`}
             aria-label={`Go to slide ${index + 1}`}
           />
