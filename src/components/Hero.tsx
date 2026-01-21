@@ -214,7 +214,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="hero-section relative bg-white pt-14 pb-1 sm:pt-18 sm:pb-2 md:pt-14 md:pb-1 lg:pt-18 lg:pb-2 xl:pt-20 xl:pb-3 md:h-screen md:max-h-screen flex flex-col justify-center">
+    <section className="hero-section relative bg-white pt-0 pb-0 sm:pt-0 sm:pb-0 md:pt-0 md:pb-0 lg:pt-0 lg:pb-0 xl:pt-0 xl:pb-0 md:h-screen md:max-h-screen flex flex-col justify-center">
       {/* Embla Carousel */}
       <div
         className="relative w-full overflow-hidden touch-pan-y cursor-grab active:cursor-grabbing"
