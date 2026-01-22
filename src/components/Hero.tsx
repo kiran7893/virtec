@@ -55,10 +55,10 @@ const heroSlides = [
     ctaLink: "/products#heat-meters",
   },
   {
-    src: "/images/WATER METER.jpg",
+    src: "/images/LXC-65.jpg",
     alt: "LXC Series Submetering Heat Meter",
     badge: "Built in Mbus Communication",
-    title: "LXC Series Submetering Heat Meter - MID and NABL complied with PT1000 and option of PT 500 Temp Sensors",
+    title: "LXC Series Submetering Heat Meter - MID and NABL complied",
     subtitle: "Class 2 accuracy and .EN 1434-1:2022 being the latest general requirements version. Compliance ensures accuracy and reliability,",
     description:
       "Premium ultrasonic flow measurement solutions",

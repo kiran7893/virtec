@@ -19,14 +19,7 @@ export default function AboutHero() {
             <h1 className="font-display text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-slate-900 leading-tight">
               About <span className="text-primary-yellow">Virtec</span>
             </h1>
-            <div className="space-y-2 sm:space-y-3 md:space-y-4 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-lg leading-relaxed text-slate-700">
-              <p>
-                Virtec Instruments Inc. is a global leader in Heat and Flow Management Solutions for HVAC and Water applications. Since our founding, we have been dedicated to delivering exceptional accuracy, reliability, and performance through advanced ultrasonic and electromagnetic measurement technologies.
-              </p>
-              <p>
-                Our commitment to excellence has established Virtec as a trusted provider of technologically advanced heat and flow measurement instruments worldwide, serving industries that demand precision, innovation, and sustainable solutions.
-              </p>
-            </div>
+            
           </motion.div>
 
           {/* Right Column - Image */}
