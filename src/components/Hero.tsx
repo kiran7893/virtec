@@ -214,7 +214,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="hero-section relative bg-white pt-0 pb-0 sm:pt-0 sm:pb-0 md:pt-0 md:pb-0 lg:pt-0 lg:pb-0 xl:pt-0 xl:pb-0 md:h-screen md:max-h-screen flex flex-col justify-center">
+    <section className="hero-section relative bg-white pt-24 sm:pt-40 md:pt-20 lg:pt-0 pb-4 sm:pb-6 md:pb-0 lg:h-screen lg:max-h-screen flex flex-col justify-center">
       {/* Embla Carousel */}
       <div
         className="relative w-full overflow-hidden touch-pan-y cursor-grab active:cursor-grabbing"
@@ -227,8 +227,8 @@ export default function Hero() {
               className="min-w-0 flex-[0_0_100%] select-none"
               style={{ minWidth: "100%" }}
             >
-              <div className="max-w-7xl mx-auto pl-3 sm:pl-4 md:pl-6 lg:pl-8 pr-0">
-                <div className="flex flex-col lg:flex-row gap-2 md:gap-4 lg:gap-6 xl:gap-8 items-center">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-8 xl:px-12">
+                <div className="flex flex-col lg:flex-row gap-4 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-10 items-center">
                   <div className="w-full lg:w-2/5 flex items-center">
                     <AnimatePresence mode="sync">
                       {selectedIndex === index && (
@@ -277,11 +277,11 @@ export default function Hero() {
                             {slide.description}
                           </motion.p>
 
-                          {/* Features List with staggered animation */}
+                          {/* Features List - Hidden on mobile/tablet, visible on md+ */}
                           <motion.div
                             variants={textVariants}
                             transition={{ duration: 0.8, delay: 0.5 }}
-                            className="flex flex-wrap gap-x-[1em] gap-y-[0.5em]"
+                            className="hidden md:flex flex-wrap gap-x-[1em] gap-y-[0.5em]"
                           >
                             {slide.features.map((feature, featureIndex) => (
                               <motion.div
@@ -308,7 +308,7 @@ export default function Hero() {
                           <motion.div
                             variants={textVariants}
                             transition={{ duration: 0.8, delay: 0.7 }}
-                            className="flex flex-col sm:flex-row gap-[0.5em] pt-[0.75em]"
+                            className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-3"
                           >
                             <motion.div
                               whileHover={{ scale: 1.05 }}
@@ -347,7 +347,7 @@ export default function Hero() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="w-full lg:w-3/5 relative h-64 sm:h-80 md:h-[380px] lg:h-[450px] xl:h-[550px] 2xl:h-[650px]"
+                    className="w-full lg:w-3/5 relative h-56 sm:h-72 md:h-80 lg:h-[420px] xl:h-[500px] 2xl:h-[600px]"
                   >
                     <Image
                       src={slide.src}
@@ -366,7 +366,7 @@ export default function Hero() {
       </div>
 
       {/* Custom Navigation Arrows */}
-      <div className="hidden sm:flex absolute top-1/2 -translate-y-1/2 left-2 md:left-4 lg:left-6 z-40 items-center">
+      <div className="hidden sm:flex absolute top-1/2 -translate-y-1/2 left-2 sm:left-4 md:left-6 lg:left-8 z-40 items-center">
         <button
           onClick={scrollPrev}
           className="group relative inline-flex h-10 w-10 sm:h-12 sm:w-12 lg:h-14 lg:w-14 xl:h-16 xl:w-16 items-center justify-center rounded-full bg-white border border-slate-200 text-slate-900 hover:bg-slate-50 hover:border-slate-300 hover:scale-110 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-yellow focus:ring-offset-2 focus:ring-offset-transparent min-h-[40px] min-w-[40px] sm:min-h-[48px] sm:min-w-[48px] lg:min-h-[56px] lg:min-w-[56px]"
@@ -375,7 +375,7 @@ export default function Hero() {
           <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6 lg:h-7 lg:w-7 xl:h-8 xl:w-8 transition-transform group-hover:-translate-x-1" />
         </button>
       </div>
-      <div className="hidden sm:flex absolute top-1/2 -translate-y-1/2 right-2 md:right-4 lg:right-6 z-40 items-center">
+      <div className="hidden sm:flex absolute top-1/2 -translate-y-1/2 right-2 sm:right-4 md:right-6 lg:right-8 z-40 items-center">
         <button
           onClick={scrollNext}
           className="group relative inline-flex h-10 w-10 sm:h-12 sm:w-12 lg:h-14 lg:w-14 xl:h-16 xl:w-16 items-center justify-center rounded-full bg-white border border-slate-200 text-slate-900 hover:bg-slate-50 hover:border-slate-300 hover:scale-110 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-yellow focus:ring-offset-2 focus:ring-offset-transparent min-h-[40px] min-w-[40px] sm:min-h-[48px] sm:min-w-[48px] lg:min-h-[56px] lg:min-w-[56px]"
