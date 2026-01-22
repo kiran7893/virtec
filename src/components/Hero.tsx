@@ -91,7 +91,7 @@ const heroSlides = [
     ctaLink: "/products#products",
   },
   {
-    src: "/images/VFD-EM 750.jpg",
+    src: "/images/VFD FAMILY.jpg",
     alt: "EM Series VFDs",
     badge: "AHUS, CSUs, Pumps , Ventilation applications",
     title: "EM760, EM 750, EM 700  Series",
@@ -214,7 +214,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="hero-section relative bg-white pt-24 sm:pt-40 md:pt-20 lg:pt-0 pb-4 sm:pb-6 md:pb-0 lg:h-screen lg:max-h-screen flex flex-col justify-center">
+    <section className="hero-section relative bg-white pt-[8.75rem] sm:pt-[11.5rem] md:pt-[7.75rem] lg:pt-0 pb-4 sm:pb-6 md:pb-0 lg:h-screen lg:max-h-screen flex flex-col justify-center">
       {/* Embla Carousel */}
       <div
         className="relative w-full overflow-hidden touch-pan-y cursor-grab active:cursor-grabbing"
@@ -259,20 +259,13 @@ export default function Hero() {
                               {slide.title}
                             </motion.h1>
 
-                            <motion.h2
-                              variants={textVariants}
-                              transition={{ duration: 0.8, delay: 0.3 }}
-                              className="text-sm sm:text-base md:text-base lg:text-lg xl:text-xl 2xl:text-xl text-primary-yellow leading-tight"
-                            >
-                              {slide.subtitle}
-                            </motion.h2>
                           </div>
 
                           {/* Description with transition */}
                           <motion.p
                             variants={textVariants}
                             transition={{ duration: 0.8, delay: 0.4 }}
-                            className="text-xs sm:text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-base text-slate-700 leading-relaxed"
+                            className="text-xs sm:text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-lg text-slate-700 leading-relaxed"
                           >
                             {slide.description}
                           </motion.p>
@@ -297,7 +290,7 @@ export default function Hero() {
                                 <CheckCircle
                                   className="w-[1em] h-[1em] text-primary-yellow flex-shrink-0"
                                 />
-                                <span className="text-xs sm:text-xs md:text-sm lg:text-sm xl:text-base font-medium">
+                                <span className="text-xs sm:text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-sm font-medium">
                                   {feature}
                                 </span>
                               </motion.div>

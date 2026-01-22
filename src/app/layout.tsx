@@ -1,10 +1,11 @@
 import "./globals.css";
-import { Fraunces } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import type { Metadata } from "next";
 
-const fraunces = Fraunces({
+const openSans = Open_Sans({
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-open-sans",
   display: "swap",
 });
 
@@ -26,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${fraunces.variable} bg-white text-slate-900 antialiased`}
+        className={`${openSans.variable} bg-white text-slate-900 antialiased`}
       >
         {children}
       </body>

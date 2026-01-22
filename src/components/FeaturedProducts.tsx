@@ -204,26 +204,6 @@ export default function FeaturedProducts() {
               </button>
             ))}
           </div>
-
-          {/* Category Description */}
-          <motion.p
-            key={activeCategory}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="text-xs sm:text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-lg text-slate-600 max-w-2xl mx-auto mb-4 sm:mb-6 md:mb-8 px-4"
-          >
-            {categories.find((cat) => cat.id === activeCategory)?.description}
-          </motion.p>
-
-          {/* All Products CTA */}
-          <Link
-            href="#products"
-            className="inline-flex items-center justify-center rounded-full bg-primary-yellow px-5 py-2 sm:px-6 sm:py-2.5 md:px-7 md:py-2.5 lg:px-8 lg:py-3 text-xs sm:text-sm md:text-base text-slate-900 shadow-[0_14px_30px_rgba(255,203,8,0.35)] transition hover:brightness-95 min-h-[40px] sm:min-h-[44px]"
-          >
-            All Products
-            <ArrowRight size={16} className="sm:w-4 sm:h-4 md:w-5 md:h-5 ml-1.5 sm:ml-2" />
-          </Link>
         </motion.div>
 
         {/* Products Grid */}

@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import WelcomeBanner from "@/components/WelcomeBanner";
 import Hero from "@/components/Hero";
 import AboutSection from "@/components/AboutSection";
 import FeaturedProducts from "@/components/FeaturedProducts";
@@ -12,9 +13,10 @@ export default function Home() {
   return (
     <div className="relative min-h-screen bg-white">
       <Navbar />
+      <WelcomeBanner />
       <Hero />
-      <AboutSection />
       <FeaturedProducts />
+      <AboutSection />
       <VisionSection />
       <SettingTrendsSection />
       <SolutionsSection />
