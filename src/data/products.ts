@@ -193,7 +193,7 @@ export const products: Product[] = [
     title: navbarLabelMap["lxc-series"], // "LXC Series"
     subtitle: "Ultrasonic Heat Meter - Range 15mm to 300mm",
     category: ["heat"],
-    image: "/images/LXC-FAMILY.JPEG",
+    image: "/images/LXC-FAMILY.jpg",
     description: "The LXC Series ultrasonic heat meters offer MID and NABL compliant thermal energy measurement from 15mm to 300mm. Built-in M-Bus communication, Class 2 accuracy, and EN 1434-1:2022 compliance. IP-65 rated, battery operated with 6- or 16-year options, flow part with integrated temp sensor.",
     keyFeatures: [
       "Range 15mm to 300mm",

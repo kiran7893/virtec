@@ -137,21 +137,48 @@ export default function FeaturedProducts() {
                   className="relative rounded-xl sm:rounded-2xl overflow-hidden border border-slate-200 shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.18)] hover:border-primary-yellow/30 transition-all duration-300 bg-white cursor-pointer h-full"
                 >
                   {/* Product Image */}
-                  <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 overflow-hidden bg-slate-100">
+                  <div className={`relative h-48 sm:h-56 md:h-64 lg:h-72 overflow-hidden ${
+                    product.image?.includes("VIR-832-M TRANSMITTER") || product.slug === "vir-insrt-800" ? "bg-white" : "bg-slate-100"
+                  }`}>
                     {product.image ? (
-                      <Image
-                        src={product.image}
-                        alt={product.label}
-                        fill
-                        className="object-cover group-hover:scale-110 transition-transform duration-500"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      />
+                      product.image.includes("VIR-832-M TRANSMITTER") ? (
+                        <div className="absolute inset-0 flex items-center justify-center p-8 sm:p-10 md:p-12 lg:p-14">
+                          <div className="relative w-full h-full flex items-center justify-center">
+                            <Image
+                              src={product.image}
+                              alt={product.label}
+                              width={800}
+                              height={600}
+                              className="object-contain max-w-[70%] max-h-[70%] w-auto h-auto group-hover:scale-105 transition-transform duration-500"
+                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            />
+                          </div>
+                        </div>
+                      ) : product.slug === "vir-insrt-800" ? (
+                        <Image
+                          src={product.image}
+                          alt={product.label}
+                          fill
+                          className="object-contain scale-[1.3] group-hover:scale-[1.35] transition-transform duration-500"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        />
+                      ) : (
+                        <Image
+                          src={product.image}
+                          alt={product.label}
+                          fill
+                          className="object-cover group-hover:scale-110 transition-transform duration-500"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        />
+                      )
                     ) : (
                       <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary-yellow/20 to-slate-900/10">
                         <div className="text-3xl sm:text-4xl font-display text-primary-yellow/30">V</div>
                       </div>
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    {product.slug !== "vir-insrt-800" && (
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    )}
                   </div>
 
                   {/* Product Info */}
@@ -159,9 +186,9 @@ export default function FeaturedProducts() {
                     {(() => {
                       const { series, rest } = parseProductLabel(product.label);
                       return (
-                        <h3 className="text-sm sm:text-base md:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-slate-900 mb-2 group-hover:text-primary-yellow transition-colors leading-tight">
-                          <span className="font-bold">{series}</span>
-                          {rest && <span className="font-normal">{rest}</span>}
+                        <h3 className="text-sm sm:text-base md:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-slate-900 mb-2 group-hover:text-primary-yellow transition-colors leading-tight font-bold">
+                          <span>{series}</span>
+                          {rest && <span>{rest}</span>}
                         </h3>
                       );
                     })()}

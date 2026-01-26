@@ -55,7 +55,7 @@ const heroSlides = [
     ctaLink: "/products/vir-uf",
   },
   {
-    src: "/images/LXC-FAMILY.jpeg",
+    src: "/images/LXC-FAMILY.jpg",
     alt: "LXC Series Submetering Heat Meter",
     badge: "Built in Mbus Communication",
     title: "LXC Series Submetering Heat Meter - MID and NABL complied",
