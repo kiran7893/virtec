@@ -41,7 +41,7 @@ export default function InstallationSection() {
             className="relative h-56 sm:h-64 md:h-72 lg:h-96 rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
           >
             <Image
-              src="/images/VIR-800 DISPLAY2.jpg"
+              src="/images/DC REACTOR.jpg"
               alt="Installation & Commissioning"
               fill
               className="object-cover"

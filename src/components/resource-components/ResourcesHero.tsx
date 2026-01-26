@@ -35,13 +35,13 @@ export default function ResourcesHero() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative h-56 sm:h-64 md:h-72 lg:h-96 rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
+            className="relative h-56 sm:h-64 md:h-72 lg:h-96 rounded-xl sm:rounded-2xl overflow-hidden"
           >
             <Image
               src="/images/LXC CALCULATOR.jpg"
               alt="Resources & Documentation"
               fill
-              className="object-cover"
+              className="object-cover border-0"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </motion.div>
