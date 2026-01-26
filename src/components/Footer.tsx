@@ -142,6 +142,10 @@ export default function Footer() {
                   <Phone size={12} className="text-primary-yellow" />
                   +971 50 888 7626
                 </a>
+                <a href="mailto:Siva@supracontrolme.com" className="flex items-center gap-1 hover:text-primary-yellow transition-colors break-all">
+                  <Mail size={12} className="text-primary-yellow" />
+                  Siva@supracontrolme.com
+                </a>
               </div>
             </div>
 

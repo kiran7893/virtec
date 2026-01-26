@@ -60,7 +60,7 @@ export default function PartnersMarketsSection() {
                 Virtec&apos;s solutions are deployed globally, supporting customers in diverse markets and applications.
               </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-5 lg:gap-6 justify-items-center lg:justify-items-stretch max-w-5xl mx-auto">
               {markets.map((market, index) => (
                 <motion.div
                   key={market.region}

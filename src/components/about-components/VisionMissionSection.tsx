@@ -39,7 +39,7 @@ export default function VisionMissionSection() {
               We instill lasting sustainability in edifices for tenants and Developers. Our approach involves directing information and procedures to foster eco-conscious, hazard-free, and inviting atmospheres via cutting-edge metering tech.
             </p>
             
-            <ul className="space-y-2 sm:space-y-3 md:space-y-4 mt-4 sm:mt-6 md:mt-8 text-left max-w-2xl mx-auto px-4">
+            <ul className="space-y-2 sm:space-y-3 md:space-y-4 mt-4 sm:mt-6 md:mt-8 text-center max-w-2xl mx-auto px-4">
               {missionPoints.map((point, index) => (
                 <motion.li
                   key={index}
@@ -47,9 +47,9 @@ export default function VisionMissionSection() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start gap-2 sm:gap-3"
+                  className="flex items-center justify-center gap-2 sm:gap-3"
                 >
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary-yellow mt-2 sm:mt-2.5 flex-shrink-0" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary-yellow flex-shrink-0" />
                   <span className="text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg 2xl:text-lg leading-relaxed text-slate-700">
                     {point}
                   </span>

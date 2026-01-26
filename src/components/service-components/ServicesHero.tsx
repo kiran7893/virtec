@@ -38,11 +38,11 @@ export default function ServicesHero() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative h-56 sm:h-64 md:h-72 lg:h-96 rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
+            className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden"
           >
             <Image
-              src="/images/VFD FAMILY.jpg"
-              alt="Virtec Services"
+              src="/images/VIR-800 DISPLAY2.jpg"
+              alt="Virtec VIR-800 Display - Smart Energy and Water Flow Measurement Solutions"
               fill
               className="object-cover"
               priority
