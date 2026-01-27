@@ -195,14 +195,6 @@ export const manuals: Resource[] = [
   
   // Reference Documents - BTU Manuals
   {
-    id: "ref-multical-603",
-    name: "Multical 603 + Electromagnetic VIR-800 EM",
-    path: "/manuals/MANUAL-BTU/5.Multical 603 +Electromagnetic  VIR-800 EM 3A24.pdf",
-    category: "reference",
-    productSeries: "VIR-800",
-    description: "Multical 603 + Electromagnetic VIR-800 EM Manual",
-  },
-  {
     id: "ref-vir-all-models",
     name: "USER MANUAL - VIR ALL MODELS",
     path: "/manuals/MANUAL-BTU/USER MANUAL -VIR ALL MODELS-25915.pdf",

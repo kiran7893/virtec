@@ -122,7 +122,7 @@ export const products: Product[] = [
     title: navbarLabelMap["vir-832-insertion"], // "VIR-832 M Insertion"
     subtitle: "Ultrasonic Flow Meter - Insertion Type",
     category: ["flow"],
-    image: "/images/VIR-INSRT-3.jpg",
+    image: "/images/VIR_832M_INSERTION.png",
     description: "The VIR-832 Insertion Type ultrasonic flow meter provides non-invasive flow measurement with insertion probe installation. This design offers flexibility for various pipe sizes and applications.",
     keyFeatures: [
       "Insertion type installation",
@@ -228,7 +228,7 @@ export const products: Product[] = [
     title: navbarLabelMap["vir-832-insertion-heat"], // "VIR-832 M Insertion"
     subtitle: "Ultrasonic Heat Meter - Insertion Type+ Pt100/PT500 Temp Sensor",
     category: ["heat"],
-    image: "/images/VIR-INSRT-3.jpg",
+    image: "/images/VIR_832M_INSERTION.png",
     description: "The VIR-832 M Insertion Type ultrasonic heat meter combines insertion-type flow measurement with Pt100/PT500 temperature sensors for accurate thermal energy measurement. Non-invasive installation with flexible pipe size coverage.",
     keyFeatures: [
       "Insertion type installation",
@@ -362,6 +362,7 @@ export const products: Product[] = [
     title: navbarLabelMap["vir-iaq-6"], // "VIR-IAQ-6-Series"
     subtitle: "Multi Sensor Option",
     category: ["iaq"],
+    image: "/images/IAQ-SENSOR.png",
     description: "The VIR-IAQ-6-Series Indoor Air Quality sensor offers multiple sensor options for comprehensive air quality monitoring. This series provides advanced monitoring capabilities for various air quality parameters.",
     keyFeatures: [
       "Multi-sensor configuration",
